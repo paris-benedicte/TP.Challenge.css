@@ -1,0 +1,323 @@
+/* La feuille de style css est rattaché grace au lien que l'on retrouve dans la balise <head> en html*/
+/*on la relie grâce à la balise <link> dont on lui donne la source du lien */
+
+/* dans un premier temps définossons un sommaire de notre css*
+1 -  on va déclarer les variables concernant 
+        la typographie
+        les couleurs utilisés
+
+2 - header 
+        le logo a redimensionner
+        le background à ajouter dans la balise container css
+        le titre du site à positionner
+        le bouton de scroll a placer
+        le menu de navigation à positionner
+
+3 - Main
+    1-  section class=items  (3 étiquettes)
+    2- le premier titre
+    3- section card1_4 (4 cards)
+    4- le second titre
+    5- section card2_3 (3 cards)
+    6- section card3_3 (3 cards)
+
+4 - Footer
+/
+
+1- /*Décalartion des variables de couleurs*/
+
+:root{
+    --blanc:#fff;
+    --blanc_transparent:#FFFFFFDF;
+    --vert_clair:#ADD981;
+    --primary-font:'Montserrat', sans-serif;
+    --secondary-font:'Abril', sans-serif;
+}
+
+/* déclaration des variables pour la typographie/police utilisées*/
+@font-face {
+    font-family:'Montserrat';
+    src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Abril';
+    src: url(../fonts/Abril_Fatface/AbrilFatface-Regular.ttf) format('opentype');
+}
+
+/*2- header*/
+
+.container{
+    background: url(/img/bg.jpg) top center/cover; /*on insère l'image de fond*/
+    position:relative;
+    margin: -20px;/* on indique un margin négatif pour retirer les bords blancs autour de l'image de fond*/
+    min-height: 732px;
+}
+
+
+.image{
+    width: 200px;   /*donne une taille au logo*/
+    padding: 30px; /*permet de décaler le logo du bord du container*/
+    display: flex;
+}
+
+.list {
+    display:flex;
+    flex-direction: row; /* met les élements de la liste en ligne*/
+    list-style-type: none; /*retire les puces des li*/
+    color:var(--blanc); /*on affecte une couleur des variables*/
+    font-family: var(--primary-font);/*on met une des police défini en variable*/
+    padding: 45px; /*permet de positionner le menu en face du logo*/
+}
+
+/*pour rendre la page un peu réactive je crée un effet au survol de la souris sur le menu navigant*/
+.list_menu:hover{
+    background-color: rgb(36, 123, 36);
+    border: 2px solid grey;
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.list_menu {
+   margin:45px;/*donne un espace entre les éléments du menu de navigation*/
+}
+
+.nav {
+    display: flex; /*permet le positionnement de la barre de navigation*/
+}
+
+.title{ /*sur la div conteneur du titre*/
+    width: 500px;/*donne la taille*/
+    height: 300px;/*donne la hauteur */
+    margin: 45px;/*crée un espace*/
+    justify-items: center;
+    
+}
+
+h1{
+    font-family: var(--secondary-font);
+    color:var(--blanc);
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 10px;
+
+}
+
+.items{
+    display:flex;/*permet le positionnement*/
+    flex-direction: row;/* met les élémentsnt en lignes*/
+    padding: 50px;
+    margin: 50px;
+    max-width: 75%;/*la taille du conteneur ne se fait que sur 75% de la page*/
+    justify-content: center;
+    gap: 150px;
+    margin: 0 auto;
+}
+
+.card_items1,
+.card_items2,
+.card_items3{
+    width: 100px;/*donne une taille au conteneur*/
+    height: 100px;/*donne une hauteur au conteneur*/   
+    text-align: center;
+    
+}
+
+.items_etiquette1,
+.items_etiquette2,
+.items_etiquette3{
+    display:flex;
+    justify-content: center;
+}
+
+#image {
+    color: #ADD981;
+    border: 3px solid #ADD981;
+    padding: 15px;
+    border-radius:10px ;
+}
+
+.title1,
+.title2{
+    max-width: 80%;
+    margin: 100px;
+}
+
+.title1 p strong,
+.title2 p strong{/* trait vert en dessous du titre*/
+    color:#ADD981;
+    border-bottom: 15px solid #ADD981;/*permet de grossir le trait*/
+    border-radius: 2px;
+}
+.title1 h2,
+.title2 h2{
+    font-weight: bolder;
+    font-size: 60px;
+    margin-bottom: 2px;
+}
+
+.card1_4{
+    display: flex;
+    flex-direction: row;
+    max-width: 80%;
+    margin: 100px;
+}
+
+.card_header img{
+    width: 300px;/* réduit la taille des images des cards*/
+    height: 350px;
+}
+
+.card_footer p,
+.card_footer1 p,
+.card_footer2 p,
+.card_footer3 p,
+.card_footer4 p{
+    color:#ADD981;
+    font-weight: bolder;
+}
+
+.card_footer .plante,
+.card_footer1 .plante,
+.card_footer2 .plante, 
+.card_footer3 .plante,
+.card_footer4 .plante{
+    color: black;
+    font-weight: bolder;
+}
+
+.card_button,
+.button1,
+.button2,
+.button3,
+.button4{
+    border: 2px solid grey;
+    background-color: #ADD981;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.card_button:hover,
+.button1:hover,
+.button2:hover,
+.button3:hover,
+.button4:hover{
+    background-color: rgb(36, 123, 36);
+    cursor: pointer;/*change la forme de la souris*/
+}
+
+.card_footer{
+    display: flex;/* rend le conteneur flexible*/
+    align-items: flex-start; /* met les éléments en haut du container*/
+    position: absolute;
+    background-color: var(--blanc_transparent);
+}
+
+.second_container{
+    align-self: center; /* centre le conteneur*/
+    margin-left: 100px; /* place le conteneur plus sur la gauche*/
+}
+
+.card1_4_3 .card_button{
+    align-self: center;
+}
+
+.card2_3{
+    max-width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin: 100px;
+    gap: 20px;/* met un espace de 20px*/
+}
+.card2_3_1 img{
+    width: 500px;/* réduit la taille des images des cards*/
+    height: 600px;
+}
+
+.card_header2 img{
+    width: 700px;
+    height: 235px;
+}
+.card2_3_3{
+   padding-top: 25px; /* met un espace de 20px au dessus de la div*/
+}
+
+.second_container .button1{
+    margin-left: 200px;
+    
+}
+
+.card_footer1,
+.card_footer2,
+.card_footer3,
+.card_footer4{
+    display: flex;
+}
+
+.second_container .button2{
+    margin-left: 400px;
+}
+
+.card3_3{
+    display:flex;
+    flex-direction: row;
+    max-width: 80%;
+    gap: 30px;
+    margin: 100px;
+}
+
+.card_header3 img{
+    width: 270px;
+    height: 500px;
+}
+
+.card_header4 img{
+    width: 600px;
+    height: 500px;
+}
+
+.card_footer4 .button4{
+    margin-left: 300px;
+}
+    
+/* je crée un footer pour la navigation qui ne faisait pas partie de la maquette */
+
+.list_li{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.list1{
+    list-style-type: none; /* retire les puces des li*/
+    border: 5px solid grey;
+    box-shadow: 17px 11px 8px 5px #515c46;
+    border-radius: 30px;
+    padding-left: 50px;/*rembourrage gauche*/
+    padding-right: 50px;/*rembourrage droite*/
+    padding-top: 25px;/*rembourrage haut*/
+    padding-bottom: 25px;/*rembourrage bas*/
+    background-color: #ADD981;
+    color: var(--blanc_transparent);/* couleur de la police*/
+    font-weight: bolder;
+}
+
+/*effet au survol non demandé mais fait pour accentuer le design de la maquette*/
+.list1:hover {
+    background-color: rgb(36, 123, 36);
+    cursor: pointer;/*change la forme de la souris*/
+}
+/*j'accentue le footer pour le démarquer du reste de la maquette en respectant le code couleur*/
+footer{
+    max-width: 100%;
+    background-color:#ADD981;
+    padding: 30px;
+}
+
+
+
+
+
+
+

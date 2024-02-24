@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge CSS</title>
+    <link rel="stylesheet" href="css/styles.css"> <!--fais le lien avec la feuille de style css-->
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Montserrat?query=monts"> <!-- lien pour la police décriture Montserrat-->
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Abril+Fatface?query=abril&sidebar.open&selection.family=Abril+Fatface"><!--lien pour la police abril-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> <!--lien pour les flaticon des étiquettes-->
+</head>
+<body>
+<!-- dans un premier temps on crée la feuille html du site on défini sa structure à partir de la maquette donnée-->
+<!-- on va faire la maquette en modéle wire frame pour pouvoir mieux penser notre modéle et réfléchir à nos div (utilisation de figma)-->
+<!-- la maquette figma a été faite pour repérer les div qui serviront de conteneurs et repérer les ensembles à créer-->
+
+<header class="container">
+    <!--On mettra l'image de fond le css du header-->
+    <div class="nav">
+
+            <img class="image" src="img/logo.png" alt="logo: Nature Emoi"> <!-- la balise permet d'insérer le logo dans le flux(devra être redimensionner dans le css)-->
+        
+
+        <nav class="nav_bar"><!--je crée la liste pour le menu de navigation en affectant des class pour le css-->
+            <ul class="list">
+                <li class="list_menu">Accueil</li> <!-- On devra insérer des ancres pour les retour au sections -->
+                <li class="list_menu">Nos Meilleures ventes</li>
+                <li class="list_menu">Nos Plantes</li>
+            </ul>
+
+        </nav>
+
+    </div>
+
+    <div class="title"> <!-- le titre sera en superposition de l'image de fonc placé dans la css : positionnement absolute ?-->
+        <h1>Nature Emoi, meilleur que le chocolat.</h1><!-- balise de titre -->
+    </div>
+
+    <div>
+        <i class="fas-fa-angle-down"></i>
+    </div>
+</header>
+<main>
+
+    <section class="items"><!-- la première section concerne les services présenté par l'entreprise -->
+
+        
+        <div class="card_items1"> <!--on va faire une div pour représenter la partie container-->
+
+            <div class="items_etiquette1"> <!-- chaque partie sera insére dans un div pour pouvoir faciliter le positionnement en css-->
+                <i class="fas fa-store" id="image"></i>
+            </div>
+
+            <p>Nos magasins à votre service</p>
+
+        </div>
+
+        <div class="card_items2"> <!--on va faire une div pour représenter la partie container-->
+
+            <div class="items_etiquette2"><!-- chaque partie sera insére dans un div pour pouvoir faciliter le positionnement en css-->
+                <i class="fas fa-people-carry" id="image"></i>
+            </div>
+
+            <p>Retrait en magasin sans contact</p>
+
+        </div>
+
+        <div class="card_items3"> <!--on va faire une div pour représenter la partie container-->
+
+            <div class="items_etiquette3"><!-- chaque partie sera insére dans un div pour pouvoir faciliter le positionnement en css-->
+                <i class="faq fa-truck" id="image"></i>
+            </div>
+
+            <p>Livraisons à domicile sans contact</p>
+        </div>
+    </section>
+
+    <div class="title1"> <!-- le titre est dans une div indépendante de la première section -->
+        <h2>Nos meilleures ventes</h2>
+        <p><strong>_____________</strong></p>
+    </div>
+
+
+    <section class="card1_4">
+
+        <div class="card1_4_1"> <!--on va faire une div pour représenter la partie container-->
+
+            <div class="card_header"><!-- chaque partie sera insére dans un div pour pouvoir faciliter le positionnement en css-->
+                <img src="img/1.jpg" alt="plante suspendu">
+            </div>
+
+            <div class="card_footer"><!-- élément container-->
+
+                <div class="container_base"><!-- contient les deux éléments à mettre en colonne-->
+                <p class="plante">Plante</p>
+                <p class="price_p">24.99 €</p>
+                </div>
+
+                <div class="second_container"> <!-- contient l'élément prix à mettre à côté-->
+                <button class="card_button">En savoir plus </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card1_4_2"> <!--on va faire une div pour représenter la partie container-->
+
+            <div class="card_header"><!-- chaque partie sera insére dans un div pour pouvoir faciliter le positionnement en css-->
+                <img src="img/2.jpg" alt="plante en pot">
+            </div>
+
+            <div class="card_footer">
+
+                <div class="container_base">
+                <p class="plante">Plante</p>
+                <p class="price_p">14.99 €</p>
+                </div>
+
+                <div class ="second_container">
+                <button class="card_button">En savoir plus</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card1_4_3"> <!--on va faire une div pour représenter la partie container-->
+
+            <div class="card_header"><!-- chaque partie sera insére dans un div pour pouvoir faciliter le positionnement en css-->
+                <img src="img/3.jpg" alt="plante en pot suspendu orange">
+            </div>
+
+            <div class=" card_footer">
+
+                <div class="container_base">
+                <p class="plante">Plante</p>
+                <p class="price_p">24.99 €</p>
+                </div>
+
+                <div class="second_container"></div>
+                <button class="card_button">En savoir plus</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card1_4_4"> <!--on va faire une div pour représenter la partie container-->
+
+            <div class="card_header"><!-- chaque partie sera insére dans un div pour pouvoir faciliter le positionnement en css-->
+                <img src="img/4.jpg" alt="plante verte fourni">
+            </div>
+
+            <div class="card_footer">
+
+                <div class="container_base">
+                <p class="plante">Plante</p>
+                <p class="price_p">29.99 €</p>
+                </div>
+                
+                <div class="second_container">
+                <button class="card_button">En savoir plus</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="title2">
+        <h2>Nos Plantes</h2>
+        <p><strong>____________</strong></p>
+    </div>
+
+    <section class="card2_3"><!-- on crée une autre section-->
+
+        <div class="card2_3_1"> <!--on va faire une div pour représenter la partie container-->
+
+            <div class="card_header1"><!-- chaque partie sera insére dans un div pour pouvoir faciliter le positionnement en css-->
+                <img src="img/Plante1.jpg" alt="petit bouquet en arbuste">
+            </div>
+
+            <div class="card_footer1">
+
+                <div class="container_base">
+                <p class="plante">Plante</p>
+                <p class="price_p">17.99 €</p>
+                </div>
+                <div class="second_container">
+                    <button class="button1">En savoir plus</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container_division">
+            <div class="card2_3_2"> <!--on va faire une div pour représenter la partie container-->
+
+                <div class="card_header2"><!-- chaque partie sera insére dans un div pour pouvoir faciliter le positionnement en css-->
+                <img src="img/Plante2.jpg" alt="">
+                </div>
+
+                <div class="card_footer2">
+
+                    <div class="container_base">
+                        <p class="plante">Plante</p>
+                        <p class="price_p">9.99 €</p>
+                    </div>
+
+                    <div class="second_container">
+                        <button class="button2">En savoir plus</button>
+                    </div>
+            </div>
+
+
+            <div class="card2_3_3"> <!--on va faire une div pour représenter la partie container-->
+
+                <div class="card_header2"><!-- chaque partie sera insére dans un div pour pouvoir faciliter le positionnement en css-->
+                    <img src="img/Plante3.jpg" alt="triples pots">
+                </div>
+
+                <div class="card_footer2">
+
+                    <div class="container_base">
+                        <p class="plante">Plante</p>
+                        <p class="price_p">44.99 €</p>
+                    </div>
+
+                    <div class="second_container">
+                        <button class="button2">En savoir plus</button>
+                    </div>
+            </div>
+
+        </div>
+        </div>
+
+    </section>
+
+    <section class="card3_3"> <!--on crée une nouvelle section-->
+
+        <div class="card3_3_1"> <!--on va faire une div pour représenter la partie container-->
+
+            <div class="card_header3"><!-- chaque partie sera insére dans un div pour pouvoir faciliter le positionnement en css-->
+                <img src="img/Plante4.jpg" alt="Plante gourgeonnante rouge">
+            </div>
+
+            <div class="card_footer3">
+
+                <div class="container_base">
+                    <p class="plante">Plante</p>
+                    <p class="price_p">39.99 €</p>
+                </div>
+
+                <div class="second_container">
+                    <button class="button3">En savoir plus</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card3_3_2"> <!--on va faire une div pour représenter la partie container-->
+
+            <div class="card_header4"><!-- chaque partie sera insére dans un div pour pouvoir faciliter le positionnement en css-->
+                <img src="img/Plante5.jpg" alt="plante saigon">
+            </div>
+
+            <div class="card_footer4">
+
+                <div class="container_base">
+                    <p class="plante">Plante</p>
+                    <p class="price_p">17.99 €</p>
+                </div>
+
+                <div class="second_container">
+                    <button class="button4">en savoir plus</button>
+                </div>
+    
+            </div>
+
+        </div>
+
+        <div class="card3_3_3"> <!--on va faire une div pour représenter la partie container-->
+
+            <div class="card_header3"><!-- chaque partie sera insére dans un div pour pouvoir faciliter le positionnement en css-->
+                <img src="img/Plante6.jpg" alt="plante de bureau">
+            </div>
+
+            <div class="card_footer3">
+
+                <div class="container_base">
+                    <p class="plante">Plante</p>
+                    <p class="price_p">24.99 €</p>
+                </div>
+                <div class="second_container">
+                    <button class="button3">en savoir plus</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</main>
+<!-- les card de chaque section sont sensiblement identique il n'y aura que le positionnement et la taille de certaine qui différent des autres-->
+<footer> <!-- ici il n'y avait pas de footer sur cette maquette mais on peut en faire une en footer pour créer quelque chose de plus cohérent-->
+    <nav><!--balise indiquant le menu de navigation en pied de page-->
+        <ul class="list_li">
+            <li class="list1">Accueil</li>
+            <li class="list1">Nos Meilleures ventes</li>
+            <li class="list1">Nos plantes</li>
+        </ul>
+    </nav>
+</footer>
+    
+</body>
+</html>
